@@ -17,7 +17,7 @@ RUN npm install -g gulp-cli mocha http-proxy-middleware
 # Clone Habitica repo and install dependencies
 RUN mkdir -p /usr/src/habitrpg
 WORKDIR /usr/src/habitrpg
-RUN git clone --branch release ssh://git@gitlab.qiyi.domain:10022/heliangwei/habitica.git /usr/src/habitrpg
+RUN git clone --branch release https://github.com/HabitRPG/habitica.git /usr/src/habitrpg
 RUN npm install
 RUN gulp build:prod --force
 
